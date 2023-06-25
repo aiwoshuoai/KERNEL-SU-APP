@@ -5,9 +5,9 @@ package me.weishu.kernelsu.profile
  * @date 2023/6/3.
  */
 enum class Capabilities(val cap: Int, val display: String, val desc: String) {
-    CAP_CHOWN(0, "CHOWN", "Make arbitrary changes to file UIDs and GIDs (see chown(2))"),
-    CAP_DAC_OVERRIDE(1, "DAC_OVERRIDE", "Bypass file read, write, and execute permission checks"),
-    CAP_DAC_READ_SEARCH(2, "DAC_READ_SEARCH", "Bypass file read permission checks and directory read and execute permission checks"),
+    CAP_CHOWN(0, "CHOWN", "对文件 UID 和 GID 进行任意更改（参见 chown（2））"),
+    CAP_DAC_OVERRIDE(1, "DAC_OVERRIDE", "绕过文件读取、写入和执行权限检查"),
+    CAP_DAC_READ_SEARCH(2, "DAC_READ_SEARCH", "绕过文件读取权限检查和目录读取并执行权限检查"),
     CAP_FOWNER(3, "FOWNER", "Bypass permission checks on operations that normally require the filesystem UID of the process to match the UID of the file (e.g., chmod(2), utime(2)), excluding those operations covered by CAP_DAC_OVERRIDE and CAP_DAC_READ_SEARCH"),
     CAP_FSETID(4, "FSETID", "Don’t clear set-user-ID and set-group-ID permission bits when a file is modified; set the set-group-ID bit for a file whose GID does not match the filesystem or any of the supplementary GIDs of the calling process"),
     CAP_KILL(5, "KILL", "Bypass permission checks for sending signals (see kill(2))."),
